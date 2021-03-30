@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 65%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Train One', sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(to top right, #0ee29b 0%, #1f91ee 100%);
+}
+
+/* LAYOUT */
+main {
+  position: relative;
+  display: flex;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 1rem 4rem 6rem rgba(7, 106, 119, 0.747);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.player {
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 11rem;
+  transition: all 0.6s;
+}
+
+/* ELEMENT */
+.name {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.score {
+  font-size: 8.5rem;
+  color: rgba(9, 44, 201, 0.923);
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(23, 131, 193, 0.903);
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-color: rgba(9, 44, 201, 0.923);
+  opacity: 0.8;
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.6s;
+}
+
+.current--label {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.current--score {
+  font-size: 4rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  font-family: inherit;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+}
+
+.btn:hover {
+  font-size: 2.8rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 1rem);
+  box-shadow: 0 1rem 2rem rgba(7, 106, 119, 0.747);
+}
+
+.btn--reset {
+  top: 5rem;
+}
+
+.btn--roll {
+  top: 35rem;
+}
+
+.btn--hold {
+  top: 45rem;
+}
+
+.dice {
+  position: absolute;
+  left: 45%;
+  height: 10rem;
+  top: 23rem;
+  transform: translateY(-50%);
+}
+
+.player--winner .name {
+  color: rgba(19, 131, 43, 0.923);
+  font-size: 4.5rem;
+}
+
+.hidden {
+  display: none;
+}
