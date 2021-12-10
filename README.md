@@ -2,7 +2,7 @@
 
 <img src="dice-game.png" width="800">
 
-### Simple dice game
+## Simple dice game
 
 - Rule
 
